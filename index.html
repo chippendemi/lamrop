@@ -1,0 +1,145 @@
+<html>
+<head>
+<style>
+#hd {
+    font: bold 35px candara;
+	color: orange;
+	text-shadow: #555555 -2px 2px
+}
+.coders {
+    font: 20px courier;
+	background-color: #eeeeee;
+}
+.coder {
+    font: 25px courier;
+	color: green;
+}
+.btn {
+  background-color: #4fb160;
+  border: outset;
+  padding: 9px;
+  border-radius: 15px;
+  color: #ffffd0;
+  font: bold 16px candara;
+  text-align: center;
+  text-shadow: -2px 2px #555555;
+}
+.slider {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #bbbbbb;
+  outline: none;
+}
+</style>
+<h1 id="hd">Welcome to lamrop editor!</h1>
+</head>
+<body>
+<div id="spds" class="coder">Speed: One Step Every 500ms</div>
+<input type="range" min="1" max="3000" value="500" class="slider" id="spd">
+<br>
+<div class="coder">Code:</div>
+<input type="text" id="txt" size="70" value="">
+<br>
+<div class="coder">Output:</div>
+<p id="out" class="coders"> </p>
+<br>
+<br>
+<button id="bttn" type="button" class="btn" onclick="start()">Click me to start!</button>
+<br>
+<div class="coder">Array:</div>
+<p id="arrcons" class="coders">[]</p>
+<p id="pointer" class="coders">pointer: </p>
+<p id="saveint" class="coders">saved value: </p>
+<p id="outpstr" class="coders">output string: </p>
+<br>
+<div class="coder">Processed Code:</div>
+<p id="coutput" class="coders"> </p>
+<div class="coder">Process Integer:</div>
+<p id="coutnum" class="coders"> </p>
+<div class="coder">Console:</div>
+<p id="console" class="coders"> </p>
+<script>
+var speed = 500;
+function start() {
+    var strt = document.getElementById("txt").value;
+	document.getElementById("console").innerHTML = 'start command received.';
+	lamrop(strt);
+}
+document.getElementById("spd").oninput = function() {
+    speed = this.value;
+    document.getElementById("spds").innerHTML = "Speed: One Step Every "+speed+"ms";
+}
+function lamrop(inp) {
+    var arr = [];
+    var zpl = 0;
+    var s = 1;
+    var i = 0;
+    var arrout = '';
+	var coutput = '';
+	var sout = '';
+	var cotr = '';
+	document.getElementById("console").innerHTML = 'variables initialized.';
+    function loop() {
+	    setTimeout(function() { 
+		if (i < inp.length) {
+        if (inp[i] == 'l') {
+            if (zpl > 0) {
+                zpl = zpl - 1;
+			}
+        } else { if (inp[i] == 'a') {
+            arr[zpl] = arr[zpl] + s;
+        } else { if (inp[i] == 'm') {
+            arr[zpl] = arr[zpl] - s;
+        } else { if (inp[i] == 'r') {
+            zpl++;
+        } else { if (inp[i] == 'o') {
+            sout = sout + arrout + '<br>';
+			document.getElementById("out").innerHTML = sout;
+        } else { if (inp[i] == 'p') {
+            arr.push(0);
+        } else { if (inp[i] == 's') {
+            s = arr[zpl];
+        } else { if (inp[i] == '+') {
+            if (inp[i+1] == 'c') {
+                arrout = arrout + String.fromCharCode(arr[zpl]);
+            } else {
+                arrout = arrout + arr[zpl].toString();
+			}
+		} else { if (inp[i] == '.') {
+		    arrout = '';
+		} else { if (inp[i] == 'i') {
+		    s = parseFloat(prompt(arrout,""));
+			while (isNaN(s)) {
+			    s = parseFloat(prompt(arrout,""))
+			}
+    }}}}}}}}}}
+	var arrc = '[';
+    var acx = 0;
+    for (acx = 0; acx < arr.length; acx++) {
+        arrc = arrc + arr[acx] + ', ';
+    }
+    arrc = arrc.substring(0, arrc.length-2) + ']';  
+	document.getElementById("arrcons").innerHTML = arrc;
+	document.getElementById("pointer").innerHTML = 'pointer: element '+zpl.toString();
+	document.getElementById("saveint").innerHTML = 'saved value: '+s.toString();
+	document.getElementById("outpstr").innerHTML = 'output string: '+arrout;
+    if (typeof inp[i] === 'undefined') {} else {
+	   coutput = coutput + inp[i];
+	   cotr = cotr + inp[i];
+	}
+	if (cotr.length == 100) {
+	   coutput = coutput + '<br>';
+	   cotr = '';
+	}
+	document.getElementById("coutput").innerHTML = coutput;
+	document.getElementById("coutnum").innerHTML = i;
+	document.getElementById("console").innerHTML = 'step '+i+'/'+(inp.length - 1)+' completed.';
+	i++;
+	loop();}
+	}, speed)}
+	loop();
+}
+</script>
+</body>
+</html>
