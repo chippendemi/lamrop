@@ -27,6 +27,10 @@ def lamrop(inp):
                 arrout = arrout + chr(arr[zpl])
             else:
                 arrout = arrout + str(arr[zpl])
+        elif inp[i] == '.':
+            arrout = ''
+        elif inp[i] == 'i':
+            s = float(input(arrout))
         i += 1
 
 lamrop(x)
