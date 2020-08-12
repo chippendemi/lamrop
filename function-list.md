@@ -6,24 +6,28 @@
 
 ## Functions:
 
-'l' - makes the array pointer go left. 
+`l` - makes the array pointer go left. 
 
-'a' - adds s to the number pointed to in the array.
+`a` - adds s to the number pointed to in the array.
 
-'m' - subtracts s from the number pointed to in the array.
+`m` - subtracts s from the number pointed to in the array.
 
-'r' - makes the array pointer go right.
+`r` - makes the array pointer go right.
 
-'o' - displays the output string.
+`o` - displays the output string.
 
-'p' - adds a new element to the right of the array (preset to 0).
+`p` - adds a new element to the right of the array (preset to 0).
 
-'s' - changes the stored variable's value to the number pointed to in the array.
+`s` - changes the stored variable's value to the number pointed to in the array.
 
-'+' -
+`+` -
 
     if immediately followed by 'c', it adds the ASCII character equivalent of the number to the right of the output string.
     
     if not, it adds the number itself to the right of the output string.
     
+`.` - resets the output string to `''`.
+
+`i` - sets the storing variable to the user's next input, with the current output string displayed as the input text.
+
 Enjoy!
