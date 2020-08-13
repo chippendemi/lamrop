@@ -103,17 +103,33 @@ function lamrop(inp) {
         } else { if (inp[i] == '+') {
             if (inp[i+1] == 'c') {
                 arrout = arrout + String.fromCharCode(arr[zpl]);
+				i++;
             } else {
                 arrout = arrout + arr[zpl].toString();
 			}
 		} else { if (inp[i] == '.') {
 		    arrout = '';
 		} else { if (inp[i] == 'i') {
-		    s = parseFloat(prompt(arrout,""));
-			while (isNaN(s)) {
-			    s = parseFloat(prompt(arrout,""))
-			}
-    }}}}}}}}}}
+		    if (inp[i+1] == 'f') {
+		        s = parseFloat(prompt(arrout,""));
+		    	while (isNaN(s)) {
+		    	    s = parseFloat(prompt(arrout,""))
+		    	}
+				i++;
+			} else { if (inp[i+1] == 'i') {
+			        s = parseInt(prompt(arrout,""));
+		        	while (isNaN(s)) {
+		    	        s = parseInt(prompt(arrout,""))
+		         	}
+				    i++;
+			    } else { if (inp[i+1] == 'c') {
+                s = prompt(arrout,"");
+				if (zpl < s.length) {
+				    s = s.charCodeAt(zpl);
+				}
+				i++;
+			}}}
+			}}}}}}}}}}
 	var arrc = '[';
     var acx = 0;
     for (acx = 0; acx < arr.length; acx++) {
@@ -128,7 +144,7 @@ function lamrop(inp) {
 	   coutput = coutput + inp[i];
 	   cotr = cotr + inp[i];
 	}
-	if (cotr.length == 75) {
+	if (cotr.length == 100) {
 	   coutput = coutput + '<br>';
 	   cotr = '';
 	}
