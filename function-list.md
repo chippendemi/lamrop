@@ -29,5 +29,10 @@
 `.` - resets the output string to `''`.
 
 `i` - sets the storing variable to the user's next input, with the current output string displayed as the input text.
-
+    
+    input types:
+        if - if 'i' is immediately followed by 'f', the storing variable gets set to the float input.
+        ii - if 'i' is immediately followed by 'i', the storing variable gets set to the integer input.
+        ic - if 'i' is immediately followed by 'c', the array pointer checks the string and assigns the ASCII character value it is pointing at to the storing variable.
+        
 Enjoy!
