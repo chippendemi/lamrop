@@ -103,6 +103,7 @@ function lamrop(inp) {
         } else { if (inp[i] == '+') {
             if (inp[i+1] == 'c') {
                 arrout = arrout + String.fromCharCode(arr[zpl]);
+				coutput = coutput + inp[i];
 				i++;
             } else {
                 arrout = arrout + arr[zpl].toString();
@@ -115,18 +116,21 @@ function lamrop(inp) {
 		    	while (isNaN(s)) {
 		    	    s = parseFloat(prompt(arrout,""))
 		    	}
+				coutput = coutput + inp[i];
 				i++;
 			} else { if (inp[i+1] == 'i') {
 			        s = parseInt(prompt(arrout,""));
 		        	while (isNaN(s)) {
 		    	        s = parseInt(prompt(arrout,""))
 		         	}
+					coutput = coutput + inp[i];
 				    i++;
 			    } else { if (inp[i+1] == 'c') {
                 s = prompt(arrout,"");
 				if (zpl < s.length) {
 				    s = s.charCodeAt(zpl);
 				}
+				coutput = coutput + inp[i];
 				i++;
 			}}}
 			}}}}}}}}}}
