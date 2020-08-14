@@ -35,4 +35,19 @@
         ii - if 'i' is immediately followed by 'i', the storing variable gets set to the integer input.
         ic - if 'i' is immediately followed by 'c', the array pointer checks the string and assigns the ASCII character value it is pointing at to the storing variable.
         
+`n` - compares the number pointed to in the array with the stored variable.
+
+    comparisons:
+        nl - greater than or equal to
+        ng - less than or equal to
+        ne - not equal to
+        ee - equal to
+        ll - less than
+        gg - greater than
+        
+    if these comparisons turn out to be true it will process the code inside the 'n' and ':'. if false it will skip the code.
+    
+    example code: ppiiaiiraslnllr+ol:nggs+o:
+    input two numbers and it will output the one with larger value.
+    
 Enjoy!
