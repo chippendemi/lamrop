@@ -149,8 +149,17 @@ function lamrop(inp) {
 		        if (arr[zpl] >= s) {
 				    i = i + 2;
 				} else {
-				    while (inp[i] != ':') {
-					    i++;
+				    var colc = 0;
+					while (colc <= 0) {
+					    if (inp[i] == ':') {
+						    colc++;
+						} else {
+						    i++;
+							if (inp[i] == 'n') {
+							    colc--;
+								i = i + 2;
+							}
+						}
 					}
 				}
 		    } else { if (inp[i+1] == 'n' && inp[i+2] == 'g') {
