@@ -32,12 +32,13 @@ def lamrop(inp):
         elif inp[i] == 'i':
             if inp[i+1] == 'f':
                 s = input(arrout)
-                ls = 0
+                ls = 1
                 try:
                     s = float(s)
                 except ValueError:
                     ls = 0
                 while ls == 0:
+                    s = input(arrout)
                     try:
                         s = float(s)
                         ls = 1
@@ -46,12 +47,13 @@ def lamrop(inp):
                 i += 1
             elif inp[i+1] == 'i':
                 s = input(arrout)
-                ls = 0
+                ls = 1
                 try:
                     s = int(s)
                 except ValueError:
                     ls = 0
                 while ls == 0:
+                    s = input(arrout)
                     try:
                         s = int(s)
                         ls = 1
@@ -63,6 +65,85 @@ def lamrop(inp):
                 if zpl < len(s):
                     s = ord(s[zpl])
                 i += 1
+        elif inp[i] == 'n':
+            if inp[i+1] == 'n' and inp[i+2] == 'l':
+                if arr[zpl] >= s:
+                    i += 2
+                else:
+                    colc = 0
+                    while colc <= 0:
+                        if inp[i] == ':':
+                            colc += 1
+                        else:
+                            i += 1
+                            if inp[i] == 'n':
+                                colc -= 1
+                                i += 2
+            elif inp[i+1] == 'n' and inp[i+2] == 'g':
+                if arr[zpl] <= s:
+                    i += 2
+                else:
+                    colc = 0
+                    while colc <= 0:
+                        if inp[i] == ':':
+                            colc += 1
+                        else:
+                            i += 1
+                            if inp[i] == 'n':
+                                colc -= 1
+                                i += 2
+            elif inp[i+1] == 'n' and inp[i+2] == 'e':
+                if arr[zpl] != s:
+                    i += 2
+                else:
+                    colc = 0
+                    while colc <= 0:
+                        if inp[i] == ':':
+                            colc += 1
+                        else:
+                            i += 1
+                            if inp[i] == 'n':
+                                colc -= 1
+                                i += 2
+            elif inp[i+1] == 'e' and inp[i+2] == 'e':
+                if arr[zpl] == s:
+                    i += 2
+                else:
+                    colc = 0
+                    while colc <= 0:
+                        if inp[i] == ':':
+                            colc += 1
+                        else:
+                            i += 1
+                            if inp[i] == 'n':
+                                colc -= 1
+                                i += 2
+            elif inp[i+1] == 'l' and inp[i+2] == 'l':
+                if arr[zpl] < s:
+                    i += 2
+                else:
+                    colc = 0
+                    while colc <= 0:
+                        if inp[i] == ':':
+                            colc += 1
+                        else:
+                            i += 1
+                            if inp[i] == 'n':
+                                colc -= 1
+                                i += 2
+            elif inp[i+1] == 'g' and inp[i+2] == 'g':
+                if arr[zpl] > s:
+                    i += 2
+                else:
+                    colc = 0
+                    while colc <= 0:
+                        if inp[i] == ':':
+                            colc += 1
+                        else:
+                            i += 1
+                            if inp[i] == 'n':
+                                colc -= 1
+                                i += 2
         i += 1
 
 lamrop(x)
