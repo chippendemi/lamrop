@@ -17,3 +17,9 @@ ppparasasasrasasasasppraaraaalllllsrrrallsrra+clllsrrrraalllsrrraaa+callllsrrrra
 ```lamrop
 pprrppparasasasrasasasasppraaraaalllllsrrrrallsrralllsrrra+clllsrrrraalllsrrraaa+callllsrrrraa+calllsrrrmmmm+caaallllsrrrra+cll+clsrrrmmmmllllsrrrrm+cll+crralllsrrraaa+caallllsrrrrm+clllsrrrmm+cmmmllllsrrrra+caaa+calllsrrraaa+clmmmlllsrrra+cl+ciilllla.rrrsrraaalllsrrrm+cllsrrrm+callllsrrrraa+cmmllsra+cr+cll+clsrrm+crm+cllllsrrrra+calllsrrra+cmmm+cmllllsrrrra+calllsrrraaa+cll+crrm+caallllsrrrrm+clllsrrrmm+cmmmllllsrrrra+caaa+calllsrrraaa+cllsrrmmlllsrrraa+cll+ciilllal.nllr+ol:nnl+o:
 ```
+
+#### A program to output the median value from three integers [without the input words]:
+
+```lamrop
+prppppppiiarrrraralllliiarrarrallliiarararmmllllllsrrrrrrnllsmm:llllsrrrmmlllllsrrrrrnllsmm:llllsrrrmmllllsrrrrnllsmm:srnlls:nnllsr:rnlllll+orrr:nnllslnlllll+orrr:nnlrlll+o::
+```
