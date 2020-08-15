@@ -21,5 +21,5 @@ pprrppparasasasrasasasasppraaraaalllllsrrrrallsrralllsrrra+clllsrrrraalllsrrraaa
 #### A program to output the median value from three integers [without the input words]:
 
 ```lamrop
-prppppppiiarrrraralllliiarrarrallliiarararmmllllllsrrrrrrnllsmm:llllsrrrmmlllllsrrrrrnllsmm:llllsrrrmmllllsrrrrnllsmm:srnlls:nnllsr:rnlllll+orrr:nnllslnlllll+orrr:nnlrlll+o::
+prppppppiiarrrraralllliiarrarrallliiarararmmllllllsrrrrrrnllsmm:llllsrrrmmlllllsrrrrrnllsmm:llllsrrrmmllllsrrrrnllsmm:srnlls:rnlllll+orrr:nnllslnlllll+orrr:nnlrlll+o::
 ```
