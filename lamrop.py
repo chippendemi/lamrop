@@ -144,6 +144,14 @@ def lamrop(inp):
                             if inp[i] == 'n':
                                 colc -= 1
                                 i += 2
+        elif inp[i] == 'x':
+            arr[zpl] *= s
+        elif inp[i] == 'd':
+            if inp[i+1] == 'd':
+                arr[zpl] %= s
+                i += 1
+            else:
+                arr[zpl] /= s
         i += 1
 
 lamrop(x)
