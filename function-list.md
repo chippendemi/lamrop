@@ -2,7 +2,7 @@
 ### Welcome to lamrop!
 ### this is a programming language with some simple functions:
 
-### [there is an array, an integer for the array's pointer, an output string, and a storing variable (preset to 1) the moment you start.]
+### [there is an array, an integer for the array's pointer, an output string, and a storing variable (name is s, preset to 1) the moment you start.]
 
 ## Functions:
 
@@ -49,5 +49,12 @@
     
     example code: ppiiaiiraslnllr+ol:nggs+o:
     input two numbers and it will output the one with larger value.
+
+`x` - multiplies s to the number pointed to in the array.
+
+`d` - 
+    
+    if immediately followed by 'd', calculates ([the number pointed to] mod [s]) and assigns that to the number pointed to
+    else calculates ([the number pointed to] divided by [s]) and assigns that to the number pointed to
     
 Enjoy!
